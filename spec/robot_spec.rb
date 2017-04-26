@@ -13,11 +13,10 @@
 require_relative '../robot'
 
 describe Robot do
-  before(:context) do
-    @r1 = Robot.new()
-  end
-
-  describe 'Initializatioin' do
+  describe 'Initialization' do
     it 'should create new robot name' do
-      expect(@r1.name.length).to exist
+      r1 = Robot.new
+      expect(r1.name).to eq('AB123')
+    end
+  end
 end
