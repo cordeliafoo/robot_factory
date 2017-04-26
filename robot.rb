@@ -11,7 +11,7 @@ class Robot
       end
       break
   end
-
+end
   def check_collision
     @@all_robots.include? @name
   end
@@ -21,5 +21,17 @@ class Robot
     random_index = rand(alphabet.count)
     alphabet[random_index]
   end
-
+  def reset
+    @name = name_randomizer
+  end
+  def name_randomizer
+    random_name = ''
+    2.times do
+      random_name += random_str
+    end
+    3.times do
+      random_name += rand(9).to_s
+    end
+    random_name
+end
 end
