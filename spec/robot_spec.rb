@@ -29,6 +29,7 @@ describe Robot do
   describe 'Reset' do
     it 'name for r1 should change' do
       expect(@r1.name).not_to eq('AB')
+
     end
   end
 end
