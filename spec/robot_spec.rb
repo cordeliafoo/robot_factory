@@ -30,7 +30,7 @@ describe Robot do
       expect(@r2).to eq (/^[A-Z]{2}\d{3}$/)
     end
 
-    it 'should not create name that has been created' do 
+    it 'should not create name that has been created' do
       expect(@r1.name).not_to eq(@r2.name)
     end
   end
