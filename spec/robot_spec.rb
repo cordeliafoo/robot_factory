@@ -14,10 +14,21 @@ require_relative '../robot'
 
 describe Robot do
   before(:context) do
-    @r1 = Robot.new()
+    @r1 = Robot.new('AB')
+    @r2 = Robot.new('CD')
   end
 
+  #1 update this test, so you get a random name
   describe 'Initializatioin' do
     it 'should create new robot name' do
-      expect(@r1.name.length).to exist
+      expect(@r1).not_to eq(@r2)
+    end
+  end
+
+  #2 if run r1.reset, name for r1 should change
+  describe 'Reset' do
+    it 'name for r1 should change' do
+      expect(@r1.name).not_to eq('AB')
+    end
+  end
 end
