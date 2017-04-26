@@ -19,4 +19,12 @@ describe Robot do
       expect(r1.name).to eq('AB123')
     end
   end
+  describe 'Reset' do
+    it 'should reset the name' do
+      before (:name) do
+      r2 = Robot.new
+      expect(r2.name).not_to eq()
+    end
+  end
+end
 end
